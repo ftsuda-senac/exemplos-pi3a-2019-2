@@ -11,9 +11,8 @@
     </organization>
     
     <developers>
-        
         <developer>
-            <id>ftsuda-senac</id>
+            <id>ftsuda-senac</id> <!-- username no Github -->
             <name>Fernando Tsuda</name>
         </developer>
         <developer>
@@ -24,7 +23,6 @@
             <id>ciclana</id>
             <name>Ciclana de Souza</name>
         </developer>
-        
     </developers>
     
     <properties>
@@ -34,14 +32,11 @@
     </properties>
     
     <dependencies>
-        
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.17</version>
         </dependency>
-
-        
     </dependencies>
 </project>
