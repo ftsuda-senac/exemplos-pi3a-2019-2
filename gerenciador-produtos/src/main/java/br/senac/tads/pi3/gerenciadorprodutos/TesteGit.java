@@ -10,6 +10,11 @@ package br.senac.tads.pi3.gerenciadorprodutos;
  * @author fernando.tsuda
  */
 public class TesteGit {
+    
+    public int retorna10() {
+        return 10;
+    }
+    
 
     public static void main(String[] args) {
         System.out.println("   VOANDO EM HOLLYWOOD");
