@@ -12,7 +12,7 @@ package br.senac.tads.pi3.gerenciadorprodutos;
 public class TesteGit {
 
     public static void main(String[] args) {
-        System.out.println("   TESTES GIT");
+        System.out.println("   VOANDO EM HOLLYWOOD");
     }
 
 }
