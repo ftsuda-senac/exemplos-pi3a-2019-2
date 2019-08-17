@@ -17,11 +17,10 @@ public class TesteGit {
     
 
     public static void main(String[] args) {
-        System.out.println("   VOANDO EM HOLLYWOOD");
-        System.out.println("   TESTES GIT alterado");
+        System.out.println("VOANDO EM HOLLYWOOD");
+        System.out.println("TESTES GIT alterado");
         System.out.println("Outra mensagem");
-        
-        System.out.println("    CHEGUEI EM BARCELONA");
+        System.out.println("CHEGUEI EM BARCELONA");
     }
 
 }
