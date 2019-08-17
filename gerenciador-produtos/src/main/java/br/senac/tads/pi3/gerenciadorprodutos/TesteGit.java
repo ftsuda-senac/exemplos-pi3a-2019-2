@@ -20,6 +20,8 @@ public class TesteGit {
         System.out.println("   VOANDO EM HOLLYWOOD");
         System.out.println("   TESTES GIT alterado");
         System.out.println("Outra mensagem");
+        
+        System.out.println("    CHEGUEI EM BARCELONA");
     }
 
 }
