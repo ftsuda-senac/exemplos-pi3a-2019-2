@@ -22,6 +22,10 @@ public class TesteGit {
         System.out.println("Outra mensagem");
         
         System.out.println("    CHEGUEI EM BARCELONA");
+        
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Numero: " + i);
+        }
     }
 
 }
