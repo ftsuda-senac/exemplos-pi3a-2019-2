@@ -30,7 +30,7 @@ public class Exemplo4Servlet extends HttpServlet {
         request.setAttribute("dtAcesso", dataAcesso);
         
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("exemplo4.jsp");
+                = request.getRequestDispatcher("/WEB-INF/exemplo4.jsp");
         dispatcher.forward(request, response);
     }
     
