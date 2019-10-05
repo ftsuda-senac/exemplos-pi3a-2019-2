@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <h1>Formulário</h1>
+                    <form method="post" action="">
+                        <input type="hidden" name="id" value="123">
+
+                        <div class="form-group row">
+                            <label for="txtNome" class="col-sm-2 col-form-label">
+                                Nome
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" name="nome" id="txtNome" 
+                                       class="form-control" placeholder="Nome" 
+                                       required maxlength="100" />
+                                <div class="invalid-feedback">
+                                    Digite um nome.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtDescricao" class="col-sm-2 col-form-label">
+                                Descrição
+                            </label>
+                            <div class="col-sm-10">
+                                <textarea name="descricao" id="txtDescricao"
+                                          class="form-control" placeholder="Descrição">
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtEmail" class="col-sm-2 col-form-label">
+                                E-mail
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" id="txtEmail" 
+                                       class="form-control" placeholder="E-mail"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Digite um e-mail.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="txtSenha" class="col-sm-2 col-form-label">
+                                Senha
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="password" name="senha" id="txtSenha" 
+                                       class="form-control" placeholder="Senha">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="txtRepetirSenha" class="col-sm-2 col-form-label">
+                                Repetir senha
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="password" name="repetirSenha" id="txtRepetirSenha" 
+                                       class="form-control" placeholder="Repetir senha">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtNumero" class="col-sm-2 col-form-label">
+                                Número da sorte
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="number" name="numeroSorte" id="txtNumero" 
+                                       class="form-control" placeholder="Número de 1 a 99" 
+                                       min="1" max="99" >
+                                <div class="invalid-feedback">
+                                    Digite um número válido.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtAltura" class="col-sm-2 col-form-label">
+                                Altura
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="number" name="altura" id="txtAltura" 
+                                       class="form-control" 
+                                       placeholder="Altura em metros com no máximo 2 casa decimais" 
+                                       min="0" max="9.99" step="0.01">
+                                <div class="invalid-feedback">
+                                    Digite uma altura válida.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtPeso" class="col-sm-2 col-form-label">
+                                Peso
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="number" name="peso" id="txtPeso" 
+                                       class="form-control" 
+                                       placeholder="Peso em Kg com no máximo 1 casa decimal" 
+                                       min="0" max="999.9" step="0.1">
+                                <div class="invalid-feedback">
+                                    Digite um peso válido.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="txtDtNascimento" class="col-sm-2 col-form-label">
+                                Data de nascimento
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="date" name="dtNascimento" id="txtDtNascimento" 
+                                       class="form-control" 
+                                       placeholder="Data no formato yyyy-MM-dd" />
+                                <div class="invalid-feedback">
+                                    Digite uma data válida.
+                                </div>
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="radio" name="sexo" id="optSexoF" 
+                                               value="0" checked />
+                                        <label class="form-check-label" for="optSexoF">
+                                            Feminino
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="radio" name="sexo" id="optSexoM" 
+                                               value="1" />
+                                        <label class="form-check-label" for="optSexoM">
+                                            Masculino
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Interesses</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="checkbox" name="interesses" 
+                                               id="interessesTecnologia" value="Tecnologia" />
+                                        <label class="form-check-label" for="interessesTecnologia">
+                                            Tecnologia
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="checkbox" name="interesses" 
+                                               id="interessesGastronomia" value="Gastronomia" />
+                                        <label class="form-check-label" for="interessesGastronomia">
+                                            Gastronomia
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="checkbox" name="interesses" 
+                                               id="interessesViagens" value="Viagens" />
+                                        <label class="form-check-label" for="interessesViagens">
+                                            Viagens
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                               type="checkbox" name="interesses" 
+                                               id="interessesInvestimentos" value="Investimentos" />
+                                        <label class="form-check-label" for="interessesInvestimentos">
+                                            Investimentos
+                                        </label>
+                                    </div>
+                                    <div class="invalid-feedback">Selecione pelo menos uma opção</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-md-3 offset-md-3">
+                                <button type="submit" class="btn btn-block btn-success">Enviar</button>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" role="button" class="btn btn-block btn-outline-dark">Cancelar</a>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+    </body>
+</html>
