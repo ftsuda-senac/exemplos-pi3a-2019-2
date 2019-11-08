@@ -51,11 +51,13 @@ public class ExemploSessaoServlet extends HttpServlet {
         // Verifica se já existe atributo itensSelecionados na sessao
         // Se nao existir cria um novo
         if (sessao.getAttribute("itensSelecionados") == null) {
-            sessao.setAttribute("itensSelecionados", new ArrayList<ItemSelecionado>());
+            sessao.setAttribute("itensSelecionados", 
+                    new ArrayList<ItemSelecionado>());
         }
 
         // Recupera a lista de itens selecionados da sessao
-        List<ItemSelecionado> itensSelecionados = (List<ItemSelecionado>) sessao.getAttribute("itensSelecionados");
+        List<ItemSelecionado> itensSelecionados = 
+                (List<ItemSelecionado>) sessao.getAttribute("itensSelecionados");
 
         // Procura pelo item selecionado a partir do ID.
         String idStr = request.getParameter("idItem");
