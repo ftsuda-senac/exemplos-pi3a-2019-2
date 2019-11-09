@@ -20,7 +20,7 @@
                             <li><c:out value="${pap.nome}" /></li>
                             </c:forEach>
                     </ul>
-                    <%--
+                    <h2>Páginas do sistema</h2>
                     <ul>
                         <c:if test="${sessionScope.usuario.verificarPapel('PEAO')}">
                             <li><a href="${pageContext.request.contextPath}/protegido/peao-page">Entrar na peao-page</a></li>
@@ -32,7 +32,6 @@
                             <li><a href="${pageContext.request.contextPath}/protegido/god-page">Entrar na god-page</a></li>
                         </c:if>
                     </ul>
-                    --%>
                     <a href="${pageContext.request.contextPath}/logout">SAIR</a>
                 </div>
             </c:when>

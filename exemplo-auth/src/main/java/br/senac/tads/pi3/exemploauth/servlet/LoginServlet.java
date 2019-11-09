@@ -30,6 +30,12 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession sessao = request.getSession();
+        if (sessao.getAttribute("usuario") != null) {
+            // Usuario já está logado -> redireciona para /home
+            response.sendRedirect(request.getContextPath() + "/home");
+            return;
+        }
         request.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
                 .forward(request, response);
     }
