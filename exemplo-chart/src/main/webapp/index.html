@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exemplo Chart.js + AJAX</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" src="./css/Chart.css">
+        <script src="./js/Chart.bundle.min.js"></script>
+        <script>
+            function ready(fn) {
+                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                    fn();
+                } else {
+                    document.addEventListener('DOMContentLoaded', fn);
+                }
+            }
+
+            ready(function () {
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'bar',
+
+                    // The data for our dataset
+                    data: {
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                        datasets: [
+                            {
+                                label: 'My First dataset',
+                                stack: 'Stack 0',
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: [3, 5, 10, 20, 50, 75, 75]
+                            },
+                            {
+                                label: 'Other dataset',
+                                stack: 'Stack 0',
+                                backgroundColor: 'rgb(100, 255, 100)',
+                                borderColor: 'rgb(100, 255, 100)',
+                                data: [95, 80, 60, 40, 40, 10, 10]
+                            },
+                            {
+                                label: 'One more dataset',
+                                stack: 'Stack 0',
+                                backgroundColor: 'rgb(100, 100, 255)',
+                                borderColor: 'rgb(100, 100, 255)',
+                                data: [2, 15, 30, 40, 10, 15, 15]
+                            }
+                        ]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Chart.js Bar Chart'
+                        }
+                    }
+                });
+
+                document.getElementById("btnAtualizar").addEventListener("click", function (ev) {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'chart-data', true);
+                    xhr.addEventListener("load", function () {
+                        if (xhr.status >= 200 && xhr.status < 400) {
+                            chart.data.datasets = JSON.parse(xhr.responseText);
+                        }
+                        chart.update();
+                    });
+                    xhr.send();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Exemplo Chart.js + AJAX</h1>
+            <button id="btnAtualizar">Atualizar chart</button>
+            <canvas id="myChart"></canvas>
+        </div>
+    </body>
+</html>
